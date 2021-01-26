@@ -1,0 +1,20 @@
+name: Test
+on: push
+
+jobs:
+  test-lib:
+    name: Test the library
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - uses: bahmutov/npm-install@v1
+      - run: yarn lib:test
+  test-app:
+    name: Test the app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - uses: bahmutov/npm-install@v1
+      - run: yarn app:test
