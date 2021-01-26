@@ -2,19 +2,21 @@ name: Test
 on: push
 
 jobs:
-  test-lib:
-    name: Test the library
+  lib:
+    name: Test & lint the library
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - uses: bahmutov/npm-install@v1
+      - run: yarn lib:lint
       - run: yarn lib:test
-  test-app:
-    name: Test the app
+  app:
+    name: Test & lint the app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - uses: bahmutov/npm-install@v1
+      - run: yarn app:lint
       - run: yarn app:test
