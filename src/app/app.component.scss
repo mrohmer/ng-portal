@@ -1,0 +1,12 @@
+.grid {
+  .cell {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid;
+    &--50 {
+      width: calc(50% - 20px);
+    }
+  }
+}

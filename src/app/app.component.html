@@ -1,0 +1,25 @@
+<div class="grid">
+  <div class="cell cell--50">
+    <rp-portal-host slot="both"></rp-portal-host>
+    <br>
+    <rp-portal-host slot="left"></rp-portal-host>
+  </div>
+  <div class="cell cell--50">
+    <rp-portal-host slot="both"></rp-portal-host>
+    <br>
+    <rp-portal-host slot="right"></rp-portal-host>
+  </div>
+</div>
+
+<hr>
+
+<ng-template rpPortalSlot="left">
+  i'm on the left
+</ng-template>
+<ng-template rpPortalSlot="right">
+  i'm on the right
+</ng-template>
+<ng-template rpPortalSlot="both">
+  i'm on both sides
+</ng-template>
+
