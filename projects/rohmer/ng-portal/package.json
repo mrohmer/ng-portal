@@ -1,6 +1,15 @@
 {
   "name": "@rohmer/ng-portal",
   "version": "0.0.1",
+  "author": {
+    "name": "Matthias Rohmer",
+    "url": "https://matthias.rohmer.rocks",
+    "email": "m@rohmer.rocks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrohmer/ng-portal.git"
+  },
   "peerDependencies": {
     "@angular/common": "^11.1.0",
     "@angular/core": "^11.1.0"
