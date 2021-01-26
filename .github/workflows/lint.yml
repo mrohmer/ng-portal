@@ -3,7 +3,7 @@ on: push
 
 jobs:
   lint-lib:
-    name: Test the library
+    name: Lint the library
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,7 +11,7 @@ jobs:
       - uses: bahmutov/npm-install@v1
       - run: yarn lib:lint
   lint-app:
-    name: Test the app
+    name: Lint the app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
