@@ -19,4 +19,4 @@ jobs:
           run: yarn publish --new-version ${GITHUB_REF/refs\/tags\//} --no-git-tag-version
           working-directory: ./dist/rohmer/ng-portal
           env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
