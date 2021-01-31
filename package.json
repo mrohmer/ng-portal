@@ -13,6 +13,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "lint": "ng lint",
+    "test": "ng test",
     "app:build": "ng build --project app",
     "app:test": "ng test --project app",
     "app:lint": "ng lint --project app",

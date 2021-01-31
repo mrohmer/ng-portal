@@ -1,0 +1,20 @@
+name: Node.js Package
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+        - uses: bahmutov/npm-install@v1
+        - name: copy readme
+          run: cp README.md projects/rohmer/ng-portal
+        - name: build lib
+          run: yarn lib:build
+        - name: publish
+          run: yarn publish --new-version $GITHUB_REF --no-git-tag-version
+          working-directory: ./dist/rohmer/ng-portal
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
