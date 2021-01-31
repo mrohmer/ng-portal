@@ -8,6 +8,8 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - uses: actions/setup-node@v2
+          with:
+            always-auth: true
         - uses: bahmutov/npm-install@v1
         - name: copy readme
           run: cp README.md projects/rohmer/ng-portal
