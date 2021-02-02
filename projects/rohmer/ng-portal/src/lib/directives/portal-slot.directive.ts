@@ -2,7 +2,7 @@ import {AfterViewInit, Directive, Host, Input, OnDestroy, TemplateRef, ViewConta
 import {PortalService} from '../services/portal.service';
 import {TemplatePortal} from '@angular/cdk/portal';
 import {ReplaySubject, Subject} from 'rxjs';
-import {distinctUntilChanged, pairwise, startWith, takeUntil} from 'rxjs/operators';
+import {distinctUntilChanged, last, pairwise, startWith, take, takeUntil} from 'rxjs/operators';
 
 @Directive({
   selector: 'ng-template[rpPortalSlot]',
@@ -46,12 +46,17 @@ export class PortalSlotDirective implements AfterViewInit, OnDestroy {
           }
         },
         // no error handling needed
-        // pairwise => no complete cleanup needed
+        // cleanup done in ngOnDestroy
       );
   }
 
   ngOnDestroy(): void {
+    this.slot$
+      .pipe(
+        take(1),
+        takeUntil(this.destroyed$),
+      )
+      .subscribe(slot => slot && this.portalService.detach(slot));
     this.destroyed$.next();
   }
-
 }

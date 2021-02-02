@@ -17,6 +17,7 @@ export class PortalService {
     });
   }
   detach(slot: string): void {
+    console.log('detach');
     const slots = Object.entries(this.slots$.value)
       .filter(([key]) => key !== slot)
       .reduce(
