@@ -1,8 +1,14 @@
 # @rohmer/ng-portal
 
-[![Powered by Rohmer](https://img.shields.io/badge/Powered%20by-Rohmer-B40A0A.svg)](https://m.rohmer.rocks)
-
 Portals made easy :wink:
+
+---
+
+[![Powered by Rohmer](https://img.shields.io/badge/Powered%20by-Rohmer-B40A0A.svg)](https://m.rohmer.rocks)
+[![NPM Downloads](https://img.shields.io/npm/dt/@rohmer/ng-portal)](https://npmjs.org/@rohmer/ng-portal)
+[![Bundle Size](https://img.shields.io/bundlephobia/min/@rohmer/ng-portal)](https://npmjs.org/@rohmer/ng-portal)
+[![Open Issues](https://img.shields.io/github/issues/mrohmer/ng-portal)](https://github.com/mrohmer/ng-portal/issues)
+
 
 ## Installation
 
